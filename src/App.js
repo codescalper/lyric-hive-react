@@ -1,12 +1,19 @@
-import React , {components} from 'react';
+import React from 'react';
 import './App.css';
-import Navbar from './components/layout/Navbar'
+import Navbar from './components/layout/Navbar';
+import Index from './components/layout/Index';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Index />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
