@@ -3,9 +3,11 @@ import './App.css';
 import Navbar from './components/layout/Navbar';
 import Index from './components/layout/Index';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {Provider} from './context'
 
 function App() {
   return (
+    <Provider>
     <BrowserRouter>
       <div>
         <Navbar />
@@ -14,6 +16,7 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+    </Provider>
   );
 }
 
