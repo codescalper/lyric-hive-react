@@ -14,7 +14,7 @@ function Spinner() {
     <PropagateLoader
       color="#ffb900"
       loading={loading}
-      size={150}
+      size={30}
     />
   );
 }

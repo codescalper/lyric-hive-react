@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
 import Spinner from '../layout/Spinner';
+import Track from './Track';
 
 class Tracks extends Component {
   render() {
@@ -14,7 +15,12 @@ class Tracks extends Component {
           } else {
             return (
               <>
-                <h1>{heading}</h1>
+                <h2 className='text-center mb-4'>{heading}</h2>
+                <div className="row">
+                    {trackList.map(item=>(
+                      <Track track={item.track} key={item.track.track_id} />
+                    ))}
+                </div>
                 
               </>
             )
