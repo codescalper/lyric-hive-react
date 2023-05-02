@@ -11,17 +11,20 @@ class Tracks extends Component {
           const { trackList, heading } = value;
 
           if (!trackList || trackList.length === 0) {
-            return <Spinner />
+            return (
+              <div className="d-flex justify-content-center align-items-center mb-4">
+                <Spinner />
+              </div>
+            )
           } else {
             return (
               <>
                 <h2 className='text-center mb-4'>{heading}</h2>
                 <div className="row">
-                    {trackList.map(item=>(
-                      <Track track={item.track} key={item.track.track_id} />
-                    ))}
+                  {trackList.map(item=>(
+                    <Track track={item.track} key={item.track.track_id} />
+                  ))}
                 </div>
-                
               </>
             )
           }
