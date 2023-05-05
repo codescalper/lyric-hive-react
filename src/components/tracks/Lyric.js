@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 class Lyric extends Component {
+
+    
+
     render() {
         return (
             <div>
